@@ -1,7 +1,9 @@
 name = "eupago-payment-api"
 type = "javascript"
 workers_dev = true
-main = "index.js"  # 🔥 This tells Wrangler which file to execute
+main = "index.js"
+
+compatibility_date = "2025-03-09"  # 🔥 Required for deployment
 
 [vars]
 # ⚠ The API key is NOT stored here! It will be added securely via Cloudflare CLI
