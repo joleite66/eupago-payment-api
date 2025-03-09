@@ -1,0 +1,6 @@
+name = "eupago-payment-api"
+type = "javascript"
+workers_dev = true
+
+[vars]
+# ⚠️ The API key is NOT stored here! It will be added securely via Cloudflare CLI
