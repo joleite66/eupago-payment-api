@@ -25,13 +25,14 @@ export default {
           client_secret: CLIENT_SECRET
         }),
       });
-
+      
       const authData = await authResponse.json();
-      const accessToken = authData.access_token;
-
-      if (!accessToken) {
-        throw new Error("Failed to obtain access token from EuPago.");
+      console.log("Auth response from EuPago:", authData); // 🔥 Logs response
+      
+      if (!authData.access_token) {
+        throw new Error(`Failed to obtain access token: ${JSON.stringify(authData)}`);
       }
+
 
       // Step 2: Query Payment Status Using Access Token
       const response = await fetch(`https://sandbox.eupago.pt/api/consulta-pagamentos?userID=${userID}`, {
