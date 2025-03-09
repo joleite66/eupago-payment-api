@@ -1,6 +1,7 @@
 name = "eupago-payment-api"
 type = "javascript"
 workers_dev = true
+main = "index.js"  # 🔥 This tells Wrangler which file to execute
 
 [vars]
-# ⚠️ The API key is NOT stored here! It will be added securely via Cloudflare CLI
+# ⚠ The API key is NOT stored here! It will be added securely via Cloudflare CLI
